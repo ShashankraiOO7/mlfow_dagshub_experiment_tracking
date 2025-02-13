@@ -5,6 +5,10 @@ from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_sc
 import seaborn as sns
 import mlflow
 import matplotlib.pyplot as plt
+import dagshub
+dagshub.init(repo_owner='ShashankraiOO7', repo_name='mlfow_dagshub_experiment_tracking', mlflow=True)
+
+mlflow.set_tracking_uri('https://github.com/ShashankraiOO7/mlfow_dagshub_experiment_tracking.git')
 
 # Load the dataset
 df = pd.read_csv(r'./data/classification_data_5000_records.csv')
