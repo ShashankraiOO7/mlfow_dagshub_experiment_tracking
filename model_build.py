@@ -24,11 +24,11 @@ X = df.drop("output", axis=1)
 y = df["output"]
 
 # Split into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.23, random_state=42)
 
 # Initialize hyperparameters
-n_estimators = 100
-max_depth = 7
+n_estimators = 45
+max_depth = 11
 
 # Initialize and train the Random Forest classifier
 clf = RandomForestClassifier(random_state=42, n_estimators=n_estimators, max_depth=max_depth)
